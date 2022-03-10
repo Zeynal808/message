@@ -13,6 +13,7 @@ var name;
 $('#tesdiq').on('click',function()
 {
    
+   
     name=$('#name').val();
     if(name===null){
          alert('adinizi daxil edin')
@@ -34,7 +35,9 @@ $('#send').on('click', function () {
    
     var text = $("#message").val();
     db.set({
-        message: text
+        message: text,
+        ad:name
+
     })
     $("#message").val('');
 
@@ -44,7 +47,7 @@ db.on('value', function (snapshot) {
     var x = snapshot.val(); 
     var p =$('<p></p>');
     
-    p.html(`${name}:${x.message}`);
+    p.html(`${x.ad}:${x.message}`);
     if (x === null||x===undefined) {
         
     }

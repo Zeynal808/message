@@ -5,14 +5,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Chat</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="./index.css">
 </head>
 
 <body>
-   <div class="show"></div>
-   <input type="text" id="message">
-   <button id="send">Send</button>
+    <div class="main">
+    <div class="container login">
 
+        <h1>Oyuna Xos geldiniz</h1>
+        
+
+        <div class="row">
+            <div class="col">
+                <div>
+                    <label for="name">Adiniz</label>
+                    <input  id='name'type="text" placeholder="Zehmet olmasa adinizi yazin">
+                    <button id="tesdiq" type="button" class="btn btn-outline-success">Tesdiq edin</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container oyun">
+        <h1 id="yourName">Salam</h1>
+        <div class="show"></div>
+        <div id="message-text">
+             <textarea type="text" id="message" cols="60" rows="3"></textarea> 
+             <button id="send"  class="btn btn-outline-dark">Send</button>
+        </div>
+       
+        
+    
+           
+       
+        
+    </div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous">
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>

@@ -1,0 +1,38 @@
+.oyun{
+    display: none;
+}
+h1{
+    text-align: center;
+    
+}
+.show
+{
+    background-color: white;
+    width: 100%;
+    height: 50vh;
+
+}
+.main
+{
+    background-image: url(./1022385_wallpapers-papper-crumpled-paper-4-5000x3750_5000x3750_h.webp);
+    width: 100%;
+    height: 100vh;
+}
+.main-2
+{
+    background-image: url(./5459607.jpg);
+    width: 100%;
+    height: 100vh;
+}
+#message-text
+{
+    margin-top: 20px;
+}
+#send
+{
+    width: 20%;
+    color: red;
+    border: 1px solid lightcoral;
+    background-color: black;
+   
+}

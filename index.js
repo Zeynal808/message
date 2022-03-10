@@ -9,21 +9,42 @@ const firebaseConfig = {
 };
 firebase.initializeApp(firebaseConfig);
 var db = firebase.database().ref();
-var defe=0;
+var name;
+$('#tesdiq').on('click',function()
+{
+   
+    name=$('#name').val();
+    if(name===null){
+         alert('adinizi daxil edin')
+    }
+    
+    else
+    {
+       $('#yourName').html(`Sehifemize xos geldin ${name}`)
+       $('.oyun').css("display","block");
+       $('.login').css('display','none');
+       $('.main').attr('class','main-2')
+       
+     
+    }
+})
+
 $('#send').on('click', function () {
-    defe++;
+    
    
     var text = $("#message").val();
     db.set({
         message: text
     })
+    $("#message").val('');
 
 })
 db.on('value', function (snapshot) {
     console.log('isledi')
     var x = snapshot.val(); 
     var p =$('<p></p>');
-    p.html(x.message);
+    
+    p.html(`${name}:${x.message}`);
     if (x === null||x===undefined) {
         
     }
@@ -33,4 +54,3 @@ db.on('value', function (snapshot) {
     console.log(x)
 }
 })
-$('.show').html('Mesajlariniz burada gorsenecek')

@@ -1,3 +1,17 @@
+var istifadeciler=[
+    {
+        name:"zeynal",
+        password:"zeynal808"
+    },
+    {
+        name:'sakina',
+        password:'sari0'
+    },
+    {
+        name:'nureddin',
+        password:'nureddin808'
+    }
+]
 const firebaseConfig = {
     apiKey: "AIzaSyBpzdr_sWdH72YdAlIU6FOCnkRFQcdBG3c",
     authDomain: "oyun-db932.firebaseapp.com",
@@ -14,9 +28,12 @@ $('#tesdiq').on('click',function()
 {
    
    
-    name=$('#name').val();
-    if(name===null){
-         alert('adinizi daxil edin')
+    name=$('#name').val().toLowerCase();
+    password=$('#password').val().toLowerCase();
+    for(i=0;i<istifadeciler.length;i++)
+    {
+          if(name.trim()!==istifadeciler[i].name||password!==istifadeciler[i].password){
+         
     }
     
     else
@@ -28,6 +45,10 @@ $('#tesdiq').on('click',function()
        
      
     }
+
+    }
+    
+ 
 })
 
 $('#send').on('click', function () {

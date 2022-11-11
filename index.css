@@ -28,6 +28,7 @@ h1{
 #message-text
 {
     margin-top: 20px;
+    overflow: auto;
 }
 #tesdiq{
     background-color:#fff6a9;

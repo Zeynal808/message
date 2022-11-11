@@ -1,15 +1,15 @@
 var istifadeciler=[
     {
-        name:"zeynal",
-        password:"zeynal808"
+        name:"pasha",
+        password:"pasha808"
     },
     {
-        name:'sakina',
-        password:'sari0'
+        name:'ibrahim',
+        password:'ibrahim808'
     },
     {
-        name:'nureddin',
-        password:'nureddin808'
+        name:'zeynal',
+        password:'zeynal808'
     }
 ]
 const firebaseConfig = {
